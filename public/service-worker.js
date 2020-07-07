@@ -2,14 +2,14 @@ const FILES_TO_CACHE = [
     "/",
     "/index.html",
     "/db.js",
-    "/manifest.json",
+    "/manifest.webmanifest",
     "/styles.css",
     "/icons/icon-192x192.png",
     "/icons/icon-512x512.png"
 ];
   
   
-const STATIC_CACHE = "static-cache-v1";
+const STATIC_CACHE = "static-cache-v2";
 const RUNTIME_CACHE = "runtime-cache";
 
 self.addEventListener("install", event => {
