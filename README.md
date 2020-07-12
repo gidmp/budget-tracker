@@ -1,4 +1,4 @@
-# [Budget Tracker] (https://aqueous-tundra-37394.herokuapp.com/)
+# [Budget Tracker](https://aqueous-tundra-37394.herokuapp.com/)
 
 
 ## Description
