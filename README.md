@@ -1,60 +1,57 @@
-# Unit 18 PWA Homework: Online/Offline Budget Trackers
-
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
-
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
-
-Offline Functionality:
-
-  * Enter deposits offline
-
-  * Enter expenses offline
-
-When brought back online:
-
-  * Offline entries should be added to tracker.
-
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
-
-## Business Context
-
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+# [Budget Tracker] (https://aqueous-tundra-37394.herokuapp.com/)
 
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## Description
+Budget Tracker is a full-stack web app that enables user to keep track of their income and budgets in form of graph.
 
-- - -
+This app was build around Service worker, Cache API and IndexedDB as its core. My task is to take the pre-built HTML, CSS and JS
+and create the front-end offline functionality that allows it to save files and data to the user's local files when internet connection
+was not found.
 
-## Commit Early and Often
+## Table of Contents
+* [Technologies](#technologies)
+* [Usage](#usage)
+* [Demo](#demo)
+* [Directions for Future Development](#Directions-for-future-Development)
+* [Questions](#questions)
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+## Technologies
+------
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* Express.js
+* [Chart.js](https://www.chartjs.org/)
+* mongoDB
+* mongoose
+* Service worker
+* IndexedDB
+* Cache API
+* Manifest
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+## Usage
+------
+* Navigate to the [deployed Heroku App](https://aqueous-tundra-37394.herokuapp.com/).
+* Enter the name of transaction and the amount
+* Choose whether the transcation will substract or add cash to existing budget
+* User's transcation history will be displayed on the chart
+* If there are no internet connection detected, user may continue to submit transaction
+* When the user's internet is back on, the budget will be re-updated, including the offline transaction
+## Demo
+------
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+![](./public/assets/images/workout-tracker3.gif)
 
-* Follow these guidelines for committing:
+## Directions for Future Development
+------
+* update HTML and CSS to be more streamlined and pleasing to look
+* add feature to delete user inputs
 
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+## Questions
+------
 
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+<img src="https://avatars2.githubusercontent.com/u/6896220?v=4" alt="a guy" width="75px" height="75px">
 
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
+If you have any questions, please contact me, [Daniel Luke Tanoeihusada](danielluke08@gmail.com) directly at danielluke08@gmail.com
 
-  * Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-* You are required to submit the following:
-
-  * the URL to the deployed application
-
-  * the URL to the Github repository

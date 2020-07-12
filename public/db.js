@@ -1,10 +1,10 @@
 
 let db;
 
-// create a new database rquest and connection
+// create an indexedDB database
 const request = indexedDB.open("budget", 1);
 
-// on upgrade needed create a new object store called pending
+// when db is updated to a new version create a object store called pending with keypath to log offline transactions
 request.onupgradeneeded = function(event) {
     const db = event.target.result;
     let objectStore = db.createObjectStore("pending", { keyPath: "id", autoIncrement: true });
@@ -13,7 +13,6 @@ request.onupgradeneeded = function(event) {
 // if request is successful, save result to db variable and check if there is internet connection. If there is run checkDatabase function
 request.onsuccess = function(event) {
     db = event.target.result;
-
     if (navigator.onLine) {
         checkDatabase();
     }
@@ -24,9 +23,8 @@ request.onerror = function(event) {
     console.log("There was an error: ", event.target.errorCode);
 };
 
-// used in index.js if the POST request to our API fails (if there is no internet connection) -- saves recored to indexedDB database
+//save data to pending if no internet detected
 function saveRecord(record) {
-
     // open a transaction and access pending object store
     const transaction = db.transaction(["pending"], "readwrite");
     const pendingStore = transaction.objectStore("pending");
@@ -67,5 +65,5 @@ function checkDatabase() {
     }
 };
 
-// listen for app coming back online
+// listen when internet is back online
 window.addEventListener("online", checkDatabase);
