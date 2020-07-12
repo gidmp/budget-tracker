@@ -41,7 +41,7 @@ was not found.
 ## Demo
 ------
 
-![](./public/assets/images/workout-tracker3.gif)
+![](./public/images/budget.gif)
 
 ## Directions for Future Development
 ------
